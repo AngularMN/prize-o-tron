@@ -27,7 +27,7 @@
                                 <input name="event_{{ $index }}" type="number" class="form-control"
                                        data-ng-model="event.event_id" required="true">
 
-                                <span class="input-group-btn" ><button class="btn btn-danger" type="button" data-ng-disabled="$first"
+                                <span class="input-group-btn" ><button class="btn btn-danger" type="button" data-ng-disabled="$first && events.length === 1"
                                                                       data-ng-click="removeEvent($index)"><i
                                         class="glyphicon glyphicon-trash"></i></button></span>
                             </div>

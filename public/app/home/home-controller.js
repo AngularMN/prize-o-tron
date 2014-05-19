@@ -67,8 +67,11 @@ angular.module('apot.homeController', ['ngResource'])
         var index = _.findIndex($scope.rsvps, { 'member': { member_id: memberId} });
         console.log(memberId, index);
         return $scope.rsvps.splice(index, 1)[0];
-      }
+      };
 
+      $scope.removeEvent = function (index) {
+        return $scope.events.splice(index, 1)[0];
+      };
 
     }
   ]);
