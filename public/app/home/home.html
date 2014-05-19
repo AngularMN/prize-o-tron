@@ -1,0 +1,79 @@
+<section class="col-sm-6">
+    <ng-form name="meetupSetup" role="form">
+
+        <div class="form-group text-info">Complete the fields below to import the names of the members who've
+            RSVPed Yes to your event.
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="key">Meetup API Key</label>
+                    <input id="key" name="data.key" type="password" class="form-control" required="true"
+                           data-ng-model="api.key">
+                </div>
+            </div>
+                    <span class="help-block">You can get your API Key code <a
+                            href="https://secure.meetup.com/meetup_api/key/" target="_blank">here</a>. We do not store your API Key.</span>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Meetup Event ID *</label>
+                    <ol class="list-unstyled">
+                        <li data-ng-repeat="event in events">
+                            <div class="input-group">
+                                <input name="event_{{ $index }}" type="number" class="form-control"
+                                       data-ng-model="event.event_id" required="true">
+
+                                <span class="input-group-btn" ><button class="btn btn-danger" type="button" data-ng-disabled="$first"
+                                                                      data-ng-click="removeEvent($index)"><i
+                                        class="glyphicon glyphicon-trash"></i></button></span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <span class="help-block">The numerical event ID at the end of the event page url</span>
+            <span class="help-block"><a data-ng-click="addEvent()">Add another event id</a> (Names will be merged into a single list)</span>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" data-ng-click="importNames()" data-ng-disabled="meetupSetup.$invalid">Import
+                Names
+            </button>
+            <span class="badge">{{ rsvps.length }}</span> names available
+            <button class="btn btn-danger pull-right" data-ng-click="resetEverything()" data-ng-disabled="meetupSetup.$pristine">Reset Everything</button>
+        </div>
+
+    </ng-form>
+    <ul class="list-unstyled">
+        <li class="list-group-item" data-ng-repeat="rsvp in rsvps | orderBy:'member.name'">
+            <button class="btn btn-danger btn-xs" data-ng-click="removeMember(rsvp.member.member_id)"><i
+                    class="glyphicon glyphicon-trash"></i></button>
+            &nbsp;{{ rsvp.member.name }}
+        </li>
+    </ul>
+
+</section>
+<section class="col-sm-6">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <button class="btn btn-primary" data-ng-click="selectRSVP()" data-ng-disabled="!rsvps.length">Pick
+                Prize Winner
+            </button>
+            <span class="badge">{{ selected.length }}</span> selected
+        </div>
+
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                <li data-ng-repeat="rsvp in selected ">
+                    <h3>{{ rsvp.member.name }}</h3>
+                    <img data-ng-src="{{ rsvp.member_photo.photo_link }}"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
