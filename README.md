@@ -1,6 +1,8 @@
 Amazing prize-o-tron
 ============
 
+[ ![Codeship Status for dalelotts/prize-o-tron](https://www.codeship.io/projects/6571a8c0-0319-0132-4bc5-025611e3c12a/status)](https://www.codeship.io/projects/30354)
+
 Meetup raffle random winner picker
 
 See it live at http://prize-o-tron.herokuapp.com/
