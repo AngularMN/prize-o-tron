@@ -28,7 +28,7 @@ angular.module('apot.homeController', ['ngResource'])
 
         angular.forEach($scope.events, function queryEvent(event) {
           if (event.event_id) {
-            promises.push(RsvpAPI.query({event_id: event.event_id, key: $scope.api.key}).$promise)
+            promises.push(RsvpAPI.query({event_id: event.event_id, key: $scope.api.key}).$promise);
           }
         });
         $q.all(promises).then(function (results) {
@@ -45,7 +45,7 @@ angular.module('apot.homeController', ['ngResource'])
         }).then(function (merged) {
           $scope.rsvps = merged;
           $scope.selected = [];
-        })
+        });
       };
 
       $scope.addEvent = function () {
