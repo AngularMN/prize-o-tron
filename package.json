@@ -21,6 +21,7 @@
   "devDependencies": {
     "bower": "latest",
     "grunt": "^0.4.4",
+    "grunt-cli": "0.1.13",
     "grunt-complexity": "^0.1.7",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-istanbul-coverage": "^0.0.5",
@@ -33,11 +34,9 @@
     "matchdep": "^0.3.0",
     "phantomjs": "^1.9.7-1"
   },
-  "peerDependencies": {
-    "grunt-cli": "0.1.13"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/dalelotts/prize-o-tron.git"
-  }
+  },
+  "engine": "node >= 0.10.30"
 }
