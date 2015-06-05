@@ -43,10 +43,10 @@ app.use('/rsvps', function (req, res) {
     });
   }).on('error', function (e) {
     return res.send(400, {
-      message: getErrorMessage(e)
+      message: e.stack
     });
   });
-})
+});
 
 /// catch 404 and forward to error handler
 app.use(function (req, res, next) {
