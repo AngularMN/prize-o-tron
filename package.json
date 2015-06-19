@@ -1,20 +1,46 @@
 {
-  "name": "amazing-prize-o-tron",
-  "version": "0.0.1",
-  "private": true,
+  "name": "angular2-webpack-starter",
+  "version": "0.0.0",
+  "description": "An Angular 2 Webpack Starter kit featuring Angular 2, Router, TypeScript, and Webpack by AngularClass",
+  "main": "",
   "scripts": {
-    "start": "node ./bin/www",
-    "postinstall": "bower install --config.interactive=false"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "server": "webpack-dev-server --inline --colors --display-error-details --display-cached ",
+    "start": "npm install && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-class/angular2-webpack-starter.git"
+  },
+  "author": "gdi2290 <github@gdi2290.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular-class/angular2-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/angular-class/angular2-webpack-starter",
   "dependencies": {
-    "express": "~4.2.0",
-    "static-favicon": "~1.0.0",
-    "morgan": "~1.0.0",
-    "cookie-parser": "~1.0.1",
-    "body-parser": "~1.0.0",
-    "debug": "~0.7.4",
-    "ejs": "~0.8.5",
-    "logfmt": "^1.1.2",
-    "bower": "^1.3.3"
+    "angular2": "2.0.0-alpha.26",
+    "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.0",
+    "rtts_assert": "2.0.0-alpha.26",
+    "rx": "^2.5.3",
+    "zone.js": "^0.5.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.14.4",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.7.0",
+    "file-loader": "^0.8.1",
+    "html-webpack-plugin": "^1.4.0",
+    "imports-loader": "^0.6.3",
+    "json-loader": "^0.5.1",
+    "style-loader": "^0.12.2",
+    "typescript": "^1.5.0-beta",
+    "typescript-simple-loader": "^0.1.2",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
   }
 }

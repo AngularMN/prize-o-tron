@@ -1,14 +1,181 @@
-Amazing prize-o-tron
-============
+<p align="center">
+  <img src="https://res.cloudinary.com/angularclass/image/upload/v1431925418/webpackAndangular2_dwhus9.png" alt="Webpack and Angular 2" width="500" height="320"/>
+</p>
 
-Meetup raffle random winner picker
+# Angular2 Webpack Starter [![Join the chat at https://gitter.im/angular-class/angular2-webpack-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angular-class/angular2-webpack-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-See it live at http://prize-o-tron.herokuapp.com/
+> A starter kit featuring [Angular 2](https://angular.io) ([Router](https://angular.io/docs/js/latest/api/router/), [Forms](https://angular.io/docs/js/latest/api/forms/), [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter)), [TypeScript](http://www.typescriptlang.org/), and [Webpack](http://webpack.github.io/) by [AngularClass](https://angularclass.com).
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-">
-    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
+> If you're looking for Angular 1.x please use [NG6-starter](https://github.com/angular-class/NG6-starter)
+
+This repo serves as an extremely minimal starter for anyone looking to get up and running with Angular 2 and TypeScript. Using a [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate.
+* Best practice in file organization for Angular 2.
+* Ready to go build system using Webpack for working with TypeScript.
+
+### Quick start
+> Clone/Download the repo then edit `app.ts` inside [`/src/app/components/app.ts`](/src/app/components/app.ts)
+
+```bash
+$ npm start # then open your browser and go to http://localhost:8080
+```
+
+
+## File Structure
+We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
+```
+angular2-webpack-starter/
+ ├──public/                           * static assets are served here
+ │   ├──lib/                          * static libraries
+ │   │   └──traceur-runtime.min.js    * ignore this file. This is needed to polyfill the browser to for ES6 features to similarly
+ │   │
+ │   ├──favicon.ico                   * replace me with your own favicon.ico
+ │   ├──service-worker.js             * ignore this. Web App service worker that's not complete yet
+ │   ├──robots.txt                    * for search engines to crawl your website
+ │   ├──human.txt                     * for humans to know who the developers are
+ │   │
+ │   └──index.html                    * Index.html: where we place our script tags
+ │
+ ├──src/                              * our source files that will be compiled to javascript
+ │   ├──app/                          * WebApp folder
+ │   │   ├──bootstrap.ts              * entry file for app
+ │   │   │
+ │   │   ├──components/               * where most of components live
+ │   │   │   ├──todo.ts               * an example of a component using a service and forms
+ │   │   │   ├──dashboard.ts          * a simple Component with a simple Directive example
+ │   │   │   │
+ │   │   │   ├──home/                 * example component as a folder
+ │   │   │   │   ├──home.ts           * how you would require your template and style files
+ │   │   │   │   ├──home.css          * simple css file for home styles
+ │   │   │   │   └──home.html         * simple html file for home template
+ │   │   │   │
+ │   │   │   └──app.ts                * App.ts: entry file for components
+ │   │   │
+ │   │   ├──services/                 * where we keep our services used throughout our app
+ │   │   │   ├──TodoService.ts        * an example of a simple service 
+ │   │   │   └──services.ts           * where we gather our injectables from our services
+ │   │   │
+ │   │   └──directives/               * where we keep our directives used throughout our app
+ │   │       ├──Autofocus.ts          * another simple directive to fix a problem with the router
+ │   │       └──directives.ts         * where we gather our directives from our directives
+ │   │
+ │   └──common/                       * where common files used throughout our app
+ │       ├──shadowDomInjectables.ts   * determind if the user is on chrome and use ShadowDom
+ │       ├──jitInjectables.ts         * turn on Just-In-Time Change Detection
+ │       ├──formInjectables.ts        * services exported by angular/forms which is the FormBuilder
+ │       └──BrowserDomAdapter.ts      * ignore this. we need to set the DomAdapter to the browser
+ │
+ ├──typings/                          * where tsd defines it's types definitions
+ │   ├──_custom/                      * where we define our custom types
+ │   │   ├──ng2.d.ts                  * where we patch angular2 types with our own types until it's fixed
+ │   │   └──custom.d.ts               * we include all of our custom types here
+ │   │
+ │   ├──angular2/
+ │   │   └──angular2.d.ts             * our Angular 2 type definitions
+ │   │
+ │   ├──es6-promise/
+ │   │   └──es6-promise.d.ts          * ES6 promises type definitions
+ │   │
+ │   ├──rx/
+ │   │   ├──rx-lite.d.ts              * rx-lite type definitions
+ │   │   └──rx.d.ts                   * rx type definitions
+ │   │
+ │   └──tsd.d.ts.ts                   * our main file for all of our type definitions
+ │
+ ├──tsconfig.json                     * config that webpack uses for typescript
+ ├──tsd.json                          * config that tsd uses for managing it's definitions
+ ├──package.json                      * what npm uses to manage it's dependencies
+ └──webpack.config.js                 * our webpack config
+```
+
+# Getting Started
+## Dependencies
+What you need to run this app:
+* `node` and `npm` (`brew install node`)
+* Ensure you're running the latest versions Node `v0.12.2`+ and NPM `2.10.0`+
+
+Once you have those, you should install these globals with `npm install -global`:
+* `webpack` (`npm install -global webpack`)
+* `webpack-dev-server` (`npm install -global webpack-dev-server`)
+
+## Installing
+* `fork` this repo
+* `clone` your fork
+* `npm install` to install all dependencies
+* `npm run server` to start the server
+
+## Running the app
+After you have installed all dependencies you can now run the app. Run `npm server` to start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
+ 
+### server
+```bash
+$ npm run server
+```
+
+### build files
+```bash
+$ npm run build
+```
+
+### watch and build files
+```bash
+$ npm run watch
+```
+
+### Contributing
+You can include more examples as components but they must introduce a new concept such as `Home` component (separate folders), and Todo (services). I'll accept pretty much everything so feel free to open a Pull-Request
+
+# TypeScript
+> To take full advantage of TypeScript with autocomplete you would have to install it globally and use an editor with the correct TypeScript plugins.
+
+## Use latest TypeScript compiler
+TypeScript 1.5 beta includes everything you need. Make sure to upgrade, even if you installed TypeScript previously.
+
+    $ npm install -global typescript@^1.5.0-beta
+
+## .d.ts Typings
+The typings in `typings/` are partially autogenerated, partially hand
+written. All the symbols should be present, but probably have wrong paramaters
+and missing members. Modify them as you go.
+
+    $ npm install -global tsd
+ > You may need to require `reference path` for your editor to autocomplete correctly
+ ```
+ /// <reference path="../../typings/tsd.d.ts" />
+ ```
+ Otherwise including them in `tsd.json` is prefered 
+
+## Use a TypeScript-aware editor
+We have good experience using these editors:
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Webstorm 10](https://www.jetbrains.com/webstorm/download/)
+* [Atom](https://atom.io/) with [TypeScript plugin](https://atom.io/packages/atom-typescript)
+* [Sublime Text](http://www.sublimetext.com/3) with [Typescript-Sublime-Plugin](https://github.com/Microsoft/Typescript-Sublime-plugin#installation)
+
+## Frequently asked questions
+* Why we are using traceur? This is due to Angular 2 not being fully migrated to TypeScript and will be removed soon.
+* What's the current browser support for Angular 2 Alpha? as of version 2.0.0-alpha.26: Chrome (43, 44, 45), Firefox (37, 39, 40), IE 11, Safari 8, iOS 8, Android 5.1 (Chrome Mobile 39).
+* What is the TypeScript warning "Value of type 'typeof Directive' is not callable. Did you mean to include 'new'?"? This is an error with the typings defined in DefinitelyTyped (please ignore until it's fixed)
+
+### Todo
+- [ ] production/development environments
+- [ ] testing
+- [ ] e2e
+- [ ] production services examples
+- [ ] hot-component-reloading
+
+# Starter Kit Support and Questions
+> Contact us anytime for anything about this repo
+
+* [Gitter: angular-class/angular2-webpack-starter](https://gitter.im/angular-class/angular2-webpack-starter)
+* [Twitter: @AngularClass](https://twitter.com/AngularClass)
+
+___
+
+enjoy — **AngularClass** 
+
+<br><br>
+
+[![AngularClass](https://angularclass.com/images/ng-crown.svg  "Angular Class")](https://angularclass.com)
+##[AngularClass](https://angularclass.com)
+> Learn Angular in 2 days from the best
