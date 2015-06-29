@@ -47,10 +47,7 @@ export class TodoService extends Store {
     todos.splice(index, 1);
 
     // Always Replace state
-    this.set({
-      todos: todos
-    });
-
+    this.set('todos', todos);
   }
 
 }//TodoService

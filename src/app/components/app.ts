@@ -8,7 +8,7 @@ import {BrowserLocation} from 'angular2/src/router/browser_location';
 // We use a folder if we want separate files
 import {Home} from './home/home';
 // Otherwise we only use one file for a component
-import {Dashboard} from './dashboard';
+import {Dashboard} from './dashboard/dashboard';
 // A simple example of a Component using a Service
 import {Todo} from './todo';
 

@@ -8,8 +8,6 @@ import {formDirectives, FormBuilder, Control, ControlGroup, Validators} from 'an
 import {appDirectives} from '../directives/directives';
 import {TodoService} from '../services/TodoService';
 
-
-
 // Simple component
 @Component({
   selector: 'todo'

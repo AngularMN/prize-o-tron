@@ -1,4 +1,4 @@
-/// <reference path="../../../typings/tsd.d.ts" />
+/// <reference path="../../../../typings/tsd.d.ts" />
 
 // Angular 2
 import {Component, View, Directive, ElementRef} from 'angular2/angular2';
