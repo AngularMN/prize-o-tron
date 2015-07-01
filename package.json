@@ -1,7 +1,7 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "0.0.0",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2, Router, TypeScript, and Webpack by AngularClass",
+  "name": "prize-o-tron",
+  "version": "0.0.1",
+  "description": "Meetup raffle random winner picker",
   "main": "",
   "scripts": {
     "build": "webpack",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular-class/angular2-webpack-starter.git"
+    "url": "https://github.com/AngularMN/prize-o-tron.git"
   },
   "author": "gdi2290 <github@gdi2290.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angular-class/angular2-webpack-starter/issues"
+    "url": "https://github.com/AngularMN/prize-o-tron/issues"
   },
-  "homepage": "https://github.com/angular-class/angular2-webpack-starter",
+  "homepage": "https://github.com/AngularMN/prize-o-tron",
   "dependencies": {
     "angular2": "2.0.0-alpha.26",
     "raw-loader": "^0.5.1",
