@@ -1,35 +1,46 @@
 {
+  "name": "angular2-webpack-starter",
+  "version": "0.0.0",
+  "description": "An Angular 2 Webpack Starter kit featuring Angular 2, Router, TypeScript, and Webpack by AngularClass",
+  "main": "",
   "scripts": {
-    "tsc": "./jspm_packages/github/mhegazy/typescript@v1.5-beta2/bin/tsc.js"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "server": "webpack-dev-server --inline --colors --display-error-details --display-cached ",
+    "start": "npm install && npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "jspm": {
-    "directories": {},
-    "configFile": "jspm.conf.js",
-    "dependencies": {
-      "angular2": "npm:angular2@^2.0.0-alpha.26",
-      "babel": "npm:babel-core@^5.5.6",
-      "babel-runtime": "npm:babel-runtime@^5.5.4",
-      "core-js": "npm:core-js@^0.9.14",
-      "es6-shim": "github:es-shims/es6-shim@^0.31.3",
-      "polymer/polymer": "github:polymer/polymer@^1.0.3",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.0",
-      "traceur": "github:jmcriffey/bower-traceur@^0.0.90",
-      "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@^0.0.90",
-      "zone.js": "npm:zone.js@^0.5.1"
-    },
-    "devDependencies": {
-      "typescript": "github:mhegazy/typescript@v1.5-beta2"
-    },
-    "buildConfig": {
-      "transpileES6": true,
-      "minify": true
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-class/angular2-webpack-starter.git"
   },
+  "author": "gdi2290 <github@gdi2290.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular-class/angular2-webpack-starter/issues"
+  },
+  "homepage": "https://github.com/angular-class/angular2-webpack-starter",
   "dependencies": {
-    "gulp": "^3.9.0"
+    "angular2": "2.0.0-alpha.26",
+    "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.0",
+    "rtts_assert": "2.0.0-alpha.26",
+    "rx": "^2.5.3",
+    "zone.js": "^0.5.0"
   },
   "devDependencies": {
-    "gulp-typescript": "^2.7.6",
-    "systemjs-builder": "^0.11.3"
+    "css-loader": "^0.14.4",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.7.0",
+    "file-loader": "^0.8.1",
+    "html-webpack-plugin": "^1.4.0",
+    "imports-loader": "^0.6.3",
+    "json-loader": "^0.5.1",
+    "style-loader": "^0.12.2",
+    "typescript": "^1.5.0-beta",
+    "typescript-simple-loader": "^0.1.2",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
   }
 }
