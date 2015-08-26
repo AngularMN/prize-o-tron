@@ -37,5 +37,5 @@
     "type": "git",
     "url": "git://github.com/dalelotts/prize-o-tron.git"
   },
-  "engine": "node >= 0.10.30"
+  "engine": "node >= 0.12"
 }
