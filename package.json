@@ -1,46 +1,46 @@
 {
-  "name": "angular2-webpack-starter",
-  "version": "0.0.0",
-  "description": "An Angular 2 Webpack Starter kit featuring Angular 2, Router, TypeScript, and Webpack by AngularClass",
-  "main": "",
+  "name": "angular2-nobullshit-boilerplate",
+  "version": "0.0.1",
+  "description": "Angular2, TypeScript and Webpack no bullshit!",
+  "main": "lib/index.ts",
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "server": "webpack-dev-server --inline --colors --display-error-details --display-cached ",
-    "start": "npm install && npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devserver": "webpack-dev-server --json --progress",
+    "dumpdev": "rm -rf www/* && webpack --progress --colors -d",
+    "dumpprod": "rm -rf www/* && webpack --progress --colors --config webpack.config.prod.js -p"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angular-class/angular2-webpack-starter.git"
+    "url": "git+https://github.com/shprink/angular2-nobullshit-boilerplate.git"
   },
-  "author": "gdi2290 <github@gdi2290.com>",
+  "author": "shprink <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angular-class/angular2-webpack-starter/issues"
+    "url": "https://github.com/shprink/angular2-nobullshit-boilerplate/issues"
   },
-  "homepage": "https://github.com/angular-class/angular2-webpack-starter",
+  "homepage": "https://github.com/shprink/angular2-nobullshit-boilerplate#readme",
   "dependencies": {
-    "angular2": "2.0.0-alpha.26",
-    "raw-loader": "^0.5.1",
-    "reflect-metadata": "^0.1.0",
-    "rtts_assert": "2.0.0-alpha.26",
-    "rx": "^2.5.3",
-    "zone.js": "^0.5.0"
+    "angular2": "2.0.0-alpha.46",
+    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha",
+    "es6-shim": "^0.33.10",
+    "node-sass": "^3.4.1",
+    "reflect-metadata": "0.1.2",
+    "zone.js": "0.5.8"
   },
   "devDependencies": {
-    "css-loader": "^0.14.4",
-    "exports-loader": "^0.6.2",
-    "expose-loader": "^0.7.0",
-    "file-loader": "^0.8.1",
-    "html-webpack-plugin": "^1.4.0",
-    "imports-loader": "^0.6.3",
-    "json-loader": "^0.5.1",
-    "style-loader": "^0.12.2",
-    "typescript": "^1.5.0-beta",
-    "typescript-simple-loader": "^0.1.2",
-    "url-loader": "^0.5.5",
-    "webpack": "^1.9.6",
-    "webpack-dev-server": "^1.8.2"
+    "autoprefixer-loader": "^3.1.0",
+    "css-loader": "^0.21.0",
+    "file-loader": "^0.8.4",
+    "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^1.6.1",
+    "json-loader": "^0.5.3",
+    "path": "^0.4.9",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.6.0",
+    "typescript": "1.6.2",
+    "util": "^0.10.3",
+    "webpack": "~1.10.0",
+    "webpack-dev-server": "~1.10.0"
   }
 }
