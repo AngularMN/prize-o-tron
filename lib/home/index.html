@@ -1,6 +1,72 @@
 <ol class="breadcrumb">
   <li class="active">Home</li>
 </ol>
-<div class="jumbotron">
-    <h1 class="display-3">Hello, world!</h1>
+<div data-ui-view="" class="ng-scope">
+  <section class="col-sm-6 ng-scope">
+    <ng-form name="meetupSetup" role="form" class="ng-pristine ng-invalid ng-invalid-required">
+
+        <div class="form-group text-info">Complete the fields below to import the names of the members who've
+            RSVPed Yes to your event.
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="key">Meetup API Key</label>
+                    <input id="key" name="data.key" type="password" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" required="true" data-ng-model="api.key">
+                </div>
+            </div>
+                    <span class="help-block">You can get your API Key code <a href="https://secure.meetup.com/meetup_api/key/" target="_blank">here</a>. We do not store your API Key.</span>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Meetup Event ID *</label>
+                    <ol class="list-unstyled">
+                        <!-- ngRepeat: event in events --><li data-ng-repeat="event in events" class="ng-scope">
+                            <div class="input-group">
+                                <input name="event_0" type="number" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" data-ng-model="event.event_id" required="true">
+
+                                <span class="input-group-btn"><button class="btn btn-danger" type="button" data-ng-disabled="$first &amp;&amp; events.length === 1" data-ng-click="removeEvent($index)" disabled="disabled"><i class="glyphicon glyphicon-trash"></i></button></span>
+                            </div>
+                        </li><!-- end ngRepeat: event in events -->
+                    </ol>
+                </div>
+            </div>
+            <span class="help-block">The numerical event ID at the end of the event page url</span>
+            <span class="help-block"><a data-ng-click="addEvent()">Add another event id</a> (Names will be merged into a single list)</span>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" data-ng-click="importNames()" data-ng-disabled="meetupSetup.$invalid" disabled="disabled">Import
+                Names
+            </button>
+            <span class="badge ng-binding">0</span> names available
+            <button class="btn btn-danger pull-right" data-ng-click="resetEverything()" data-ng-disabled="meetupSetup.$pristine" disabled="disabled">Reset Everything</button>
+        </div>
+
+    </ng-form>
+    <ul class="list-unstyled">
+        <!-- ngRepeat: rsvp in rsvps | orderBy:'member.name' -->
+    </ul>
+
+  </section>
+  <section class="col-sm-6 ng-scope">
+  
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <button class="btn btn-primary" data-ng-click="selectRSVP()" data-ng-disabled="!rsvps.length" disabled="disabled">Pick
+                  Prize Winner
+              </button>
+              <span class="badge ng-binding">0</span> selected
+          </div>
+  
+          <div class="panel-body">
+              <ul class="list-unstyled">
+                  <!-- ngRepeat: rsvp in selected -->
+              </ul>
+          </div>
+      </div>
+  </section>
 </div>

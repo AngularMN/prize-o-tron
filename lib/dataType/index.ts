@@ -22,6 +22,6 @@ export class DataType {
     }
 
     triggerModelChange(){
-        this.firstName = this.service.getRandowString(8);
+        this.firstName = this.service.getRandomString(8);
     }
 }

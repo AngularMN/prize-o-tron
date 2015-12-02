@@ -1,7 +1,7 @@
 {
-  "name": "angular2-nobullshit-boilerplate",
+  "name": "prize-o-tron",
   "version": "0.0.1",
-  "description": "Angular2, TypeScript and Webpack no bullshit!",
+  "description": "Angular2 Re-write of AngularMN's prize-o-tron, starter project courtesy Julien Renaux",
   "main": "lib/index.ts",
   "scripts": {
     "devserver": "webpack-dev-server --json --progress",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shprink/angular2-nobullshit-boilerplate.git"
+    "url": "git+https://github.com/angularmn/prize-o-tron"
   },
-  "author": "shprink <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
+  "author": "AngularMN community (https://www.meetup.com/AngularMN)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shprink/angular2-nobullshit-boilerplate/issues"
+    "url": "https://github.com/angularmn/prize-o-tron/issues"
   },
-  "homepage": "https://github.com/shprink/angular2-nobullshit-boilerplate#readme",
+  "homepage": "https://github.com/angularmn/prize-o-tron#readme",
   "dependencies": {
     "angular2": "2.0.0-alpha.46",
     "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha",

@@ -1,18 +1,11 @@
-## Contains
+# Prize-o-tron
 
-* Webpack config
-* Sass scaffolding
-* Routing capability
-* Http request demonstration
-* Bootstrap 4 Import
-* Components
-    * App (app scaffolding)
-    * Home (homepage)
-    * Navbar (menu)
-    * HttpModule (Http call)
-    * About (Info about this project) 
+Originally created by [@dalelotts](https://twitter.com/dalelotts), the Prize-o-tron allows Meetup organizers to 
+query the attendees of a given meetup and select winners at random for a prize giveaway.
 
-## Preriquisites
+THIS IS A WORK IN PROGRESS RE-WRITE USING ANGULAR2, TYPESCRIPT & WEBPACK
+ 
+## Prerequisites
 
 * NodeJS (recommended: 4.1.x)
 * NPM (recommended: 3.3.x `sudo npm install -g npm`)
@@ -39,4 +32,5 @@ then open `http://localhost:8080/`
 
 ## Credit
 
+* https://github.com/shprink/angular2-nobullshit-boilerplate
 * https://github.com/AngularClass/angular2-webpack-starter
