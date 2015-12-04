@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  min-height: 150px;
+  border: 1px solid transparent;
+}
+
+.shame {
+  opacity: 0.6;
+  animation: slam 1.0s ease-out both;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  position: absolute; 
+  top: 0;    
+  left: 0;
+  right: 0
+}
+
+.overlay {
+  animation: fade 3s ease-out both;
+  position: absolute; 
+  left: 0; 
+  top: 0;
+  right: 0;
+  bottom: 0;  
+}
+
+
+@keyframes fade {
+  0% { background-color: rgba(0,0,0,0.0)  }
+  100% { background-color: rgba(0,0,0,0.5)  }
+}
+
+@keyframes slam {
+  0% { transform: scale(10.0) rotate(30deg);  }
+  75% { transform: scale(1.1) rotate(-35deg);  }
+  80% { transform: scale(1.0) rotate(-35deg);  }
+  85% { transform: scale(0.9) rotate(-35deg);  }
+  90% { transform: scale(1.05) rotate(-35deg);  }
+  95% { transform: scale(0.96) rotate(-35deg);  }
+  100% { transform: scale(1.0) rotate(-35deg);  }
+}
