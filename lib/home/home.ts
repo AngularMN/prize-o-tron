@@ -1,10 +1,11 @@
 import {Component, View, NgFor} from 'angular2/angular2';
+import {Shame} from "../shame/shame"
 
 @Component({
     selector: "home",
-    directives: [],
-    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./index.scss')],
-    template: require('./index.html')
+    directives: [Shame],
+    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./home.scss')],
+    template: require('./home.html')
 })
 export class Home {
 

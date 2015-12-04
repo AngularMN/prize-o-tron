@@ -5,8 +5,8 @@ import DataTypeService from './service';
     selector: "home",
     directives: [FORM_DIRECTIVES],
     providers: [DataTypeService],
-    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./index.scss')],
-    template: require('./index.html')
+    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./dataType.scss')],
+    template: require('./dataType.html')
 })
 export class DataType {
 

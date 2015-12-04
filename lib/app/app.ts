@@ -1,9 +1,9 @@
 import {Component, View} from 'angular2/angular2';
-import {Navbar} from '../navbar/index';
-import {Home} from '../home/index';
-import {About} from '../about/index';
+import {Navbar} from '../navbar/navbar';
+import {Home} from '../home/home';
+import {About} from '../about/about';
 import {HttpPage} from '../http/index';
-import {DataType} from '../dataType/index';
+import {DataType} from '../dataType/dataType';
 import {RouterOutlet, RouteConfig, Route} from 'angular2/router';
 
 @Component({
@@ -11,8 +11,8 @@ import {RouterOutlet, RouteConfig, Route} from 'angular2/router';
 })
 @View({
     directives: [Navbar, RouterOutlet],
-    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./index.scss')],
-    template: require('./index.html')
+    styles: [require('!raw!autoprefixer?browsers=last 2 versions!sass!./app.scss')],
+    template: require('./app.html')
 })
 @RouteConfig([
     new Route({ path: '/', component: Home, name: 'Home' }),

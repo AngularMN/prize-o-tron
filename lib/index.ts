@@ -7,7 +7,7 @@ import 'es6-shim';
 import {bootstrap, provide, FORM_PROVIDERS} from 'angular2/angular2';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy, APP_BASE_HREF} from 'angular2/router';
 import {HTTP_PROVIDERS} from 'angular2/http';
-import {App} from './app/index';
+import {App} from './app/app';
 import {Http} from 'angular2/http';
 
 bootstrap(App, [
