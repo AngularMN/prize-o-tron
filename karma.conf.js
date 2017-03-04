@@ -1,98 +1,44 @@
-/*globals module */
-
-/**
- * @license angular-bootstrap-datetimepicker
- * (c) 2013 Knight Rider Consulting, Inc. http://www.knightrider.com
- * License: MIT
- */
-
-/**
- *
- *    @author        Dale "Ducky" Lotts
- *    @since        7/21/13
- */
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/0.13/config/configuration-file.html
 
 module.exports = function (config) {
-  'use strict';
   config.set({
-
-    frameworks: ['jasmine'],
-
+    basePath: '',
+    frameworks: ['jasmine', '@angular/cli'],
     plugins: [
-      'karma-jasmine',
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-phantomjs-launcher',
-      'karma-coverage'
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular/cli/plugins/karma')
     ],
-
+    client:{
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
     files: [
-      'public/lib/jquery/dist/jquery.js',
-      'public/lib/bootstrap/dist/js/bootstrap.js',
-      'public/lib/angular/angular.js',
-      'public/lib/angular-mocks/angular-mocks.js',
-      'public/app/**/*.js',
+      { pattern: './src/test.ts', watched: false }
     ],
-
-    // list of files to exclude
-    exclude: [
-
-    ],
-
     preprocessors: {
-      '**/src/js/*.js': ['coverage']
+      './src/test.ts': ['@angular/cli']
     },
-
-    // optionally, configure the reporter
-    coverageReporter: {
-      reporters: [
-        {type: 'json', dir: 'coverage/'},
-        {type: 'html', dir: 'coverage/'}
-      ]
+    mime: {
+      'text/x-typescript': ['ts','tsx']
     },
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress', 'junit'
-    reporters: ['progress', 'coverage'],
-
-    // web server port
+    coverageIstanbulReporter: {
+      reports: [ 'html', 'lcovonly' ],
+      fixWebpackSourcePaths: true
+    },
+    angularCli: {
+      environment: 'dev'
+    },
+    reporters: config.angularCli && config.angularCli.codeCoverage
+              ? ['progress', 'coverage-istanbul']
+              : ['progress', 'kjhtml'],
     port: 9876,
-
-
-    // cli runner port
-    runnerPort: 9100,
-
-
-    // enable / disable colors in the output (reporters and logs)
     colors: true,
-
-
-    // level of logging
-    // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
     logLevel: config.LOG_INFO,
-
-
-    // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
-
-
-    // Start these browsers, currently available:
-    // - Chrome
-    // - ChromeCanary
-    // - Firefox
-    // - Opera
-    // - Safari (only Mac)
-    // - PhantomJS
-    // - IE (only Windows)
+    autoWatch: true,
     browsers: ['Chrome'],
-
-
-    // If browser does not capture in given timeout [ms], kill it
-    captureTimeout: 60000,
-
-
-    // Continuous Integration mode
-    // if true, it capture browsers, run tests and exit
     singleRun: false
   });
 };
