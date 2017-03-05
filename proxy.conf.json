@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://api.meetup.com/2/",
+    "changeOrigin": true,
+    "secure": true,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "debug"
+  }
+}
