@@ -3,12 +3,15 @@ import {
   OnInit
 } from '@angular/core';
 
-import { RsvpService } from '../rsvp.service';
+import {
+  RsvpService
+} from '../rsvp.service';
 
 @Component({
   selector: 'app-meetupevent',
   templateUrl: './meetupevent.component.html',
-  styleUrls: ['./meetupevent.component.css']
+  styleUrls: ['./meetupevent.component.css'],
+  providers: [RsvpService]
 })
 export class MeetupeventComponent implements OnInit {
 
@@ -27,9 +30,8 @@ export class MeetupeventComponent implements OnInit {
       event_id: null
     })
   }
+  
   importNames(apiKey, eventId) {
     alert(apiKey + ", " + eventId)
   }
-
-
 }
