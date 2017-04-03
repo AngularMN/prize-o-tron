@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
+## Project setup
+
+1. Install node
+1. Install angular cli `npm install -g @angular/cli`
+1. Fork this repository (click the `fork` button in the top right of the screen)
+1. Clone your fork `git clone https://github.com/[your-user-name]/prize-o-tron`
+1. Install project dependencies
+   ```
+   cd prize-o-tron
+   npm install
+   npm test
+   ```
+1. Start the server `npm start`
+1. Visit http://localhost:4200
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
