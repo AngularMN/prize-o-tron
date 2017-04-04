@@ -8,9 +8,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. Install angular cli `npm install -g @angular/cli`
 1. Fork this repository (click the `fork` button in the top right of the screen)
 1. Clone your fork `git clone https://github.com/[your-user-name]/prize-o-tron`
+    - ^^ Note that you must replace **[your-user-name]** with your github user name. 
 1. Install project dependencies
    ```
    cd prize-o-tron
+   git checkout develop
    npm install
    npm test
    ```
