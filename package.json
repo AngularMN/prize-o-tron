@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "engines": {
-    "node": ">=6.9.1",
-    "npm": ">=3.10.8"
+    "node": ">=7.8.0",
+    "npm": ">=4.2.0"
   },
   "scripts": {
     "ng": "ng",
@@ -46,6 +46,6 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.1",
     "ts-node": "~3.0.2",
-    "tslint": "~5.0.0"
+    "tslint": "^5.0.0"
   }
 }
