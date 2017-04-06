@@ -3,9 +3,17 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MeetupeventComponent } from './meetupevent/meetupevent.component';
 
+import { MaterialModule } from '@angular/material';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports:[
+        MaterialModule.forRoot(),
+        BrowserAnimationsModule
+      ],
       declarations: [
         AppComponent,
         MeetupeventComponent
