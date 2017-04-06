@@ -7,31 +7,27 @@ import {
   RsvpService
 } from '../rsvp.service';
 
+import { Attendee } from '../attendee';
+
 @Component({
   selector: 'app-meetupevent',
   templateUrl: './meetupevent.component.html',
-  styleUrls: ['./meetupevent.component.css'],
+  styleUrls: ['./meetupevent.component.scss'],
   providers: [RsvpService]
 })
 export class MeetupeventComponent implements OnInit {
 
-  events: Object[]
+  private attendees: Attendee[];
 
-  constructor(private rsvpService: RsvpService) {
-    this.events = [{
-      event_id: null
-    }]
-  }
+  constructor(private rsvpService: RsvpService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  addEvent() {
-    this.events.push({
-      event_id: null
-    })
-  }
-  
   importNames(apiKey, eventId) {
-    alert(apiKey + ", " + eventId)
+    this.rsvpService.getAttendees(apiKey, eventId)
+      .subscribe(res => {
+        console.log(res);
+        this.attendees = res;
+      });
   }
 }
