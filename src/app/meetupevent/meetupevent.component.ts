@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-meetupevent',
   templateUrl: './meetupevent.component.html',
-  styleUrls: ['./meetupevent.component.css'],
+  styleUrls: ['./meetupevent.component.scss'],
   providers: [RsvpService]
 })
 export class MeetupeventComponent implements OnInit {
@@ -30,7 +30,7 @@ export class MeetupeventComponent implements OnInit {
       event_id: null
     })
   }
-  
+
   importNames(apiKey, eventId) {
     alert(apiKey + ", " + eventId)
   }
