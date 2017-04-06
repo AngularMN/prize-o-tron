@@ -1,33 +1,40 @@
-<form name="meetupSetup" role="form">
-
-  <div class="form-group text-info">Complete the fields below to import the names of the members who've RSVPed Yes to your event.
-  </div>
-
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-6">
-        <label for="key">Meetup API Key</label>
-        <input id="key" type="password" class="form-control" required="true" #apiKey>
-      </div>
+<md-card>
+  <form name="meetupSetup" role="form">
+    
+    <div class="form-group text-info">Complete the fields below to import the names of the members who've RSVPed Yes to
+      your event.
     </div>
-    <span class="help-block">You can get your API Key code <a href="https://secure.meetup.com/meetup_api/key/" target="_blank">here</a>. We do not store your API Key.</span>
-  </div>
-
-  <div class="form-group">
-    <div class="row">
-      <div class="col-sm-6">
-        <label>Meetup Event ID *</label>
-        <input type="number" class="form-control" #eventId required="true">
+    
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-12">
+          <md-input-container>
+            <input mdInput id="key" type="password" placeholder="Meetup API Key" required="true" #apiKey>
+          </md-input-container>
+        </div>
       </div>
+      <span class="help-block">You can get your API Key code <a href="https://secure.meetup.com/meetup_api/key/"
+                                                                target="_blank">here</a>. We do not store your API Key.</span>
     </div>
-    <span class="help-block">The numerical event ID at the end of the event page url</span>
-    <span class="help-block"><a (click)="addEvent()">Add another event id</a> (Names will be merged into a single list)</span>
-  </div>
-
-  <div class="form-group">
-    <button class="btn btn-primary" (click)="importNames(apiKey.value, eventId.value)" data-ng-disabled="meetupSetup.$invalid">Import
-                Names
-            </button>
-    <span class="badge">0</span> names available
-  </div>
-</form>
+    
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6">
+          <md-input-container>
+            <input mdInput type="input" placeholder="Meetup Event ID" required="true" #eventId>
+          </md-input-container>
+        </div>
+      </div>
+      <span class="help-block">The numerical event ID at the end of the event page url</span>
+      <span class="help-block"><a (click)="addEvent()">Add another event id</a> (Names will be merged into a single list)</span>
+    </div>
+    
+    <div class="form-group">
+      <button md-raised-button color="primary" (click)="importNames(apiKey.value, eventId.value)"
+              data-ng-disabled="meetupSetup.$invalid">Import
+        Names
+      </button>
+      <span class="badge">0</span> names available
+    </div>
+  </form>
+</md-card>
