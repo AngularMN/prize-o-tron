@@ -15,23 +15,12 @@ import {
 })
 export class MeetupeventComponent implements OnInit {
 
-  events: Object[]
+  constructor(private rsvpService: RsvpService) { }
 
-  constructor(private rsvpService: RsvpService) {
-    this.events = [{
-      event_id: null
-    }]
-  }
-
-  ngOnInit() {}
-
-  addEvent() {
-    this.events.push({
-      event_id: null
-    })
-  }
+  ngOnInit() { }
 
   importNames(apiKey, eventId) {
-    alert(apiKey + ", " + eventId)
+    this.rsvpService.getAttendees(apiKey, eventId)
+      .subscribe((res) => console.log(res));
   }
 }
